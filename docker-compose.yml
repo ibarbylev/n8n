@@ -11,6 +11,14 @@ services:
       N8N_SECURE_COOKIE: "false"
       N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS: "true"
       N8N_ENCRYPTION_KEY: "CHANGE_THIS_TO_A_LONG_RANDOM_SECRET"
+
+      # --- Важно для Google OAuth ---
+      N8N_HOST: localhost
+      N8N_PORT: 5678
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: http://localhost:5678/
+      # альтернатива / дополнение:
+      # N8N_EDITOR_BASE_URL: http://localhost:5678/
     volumes:
       - n8n_data:/home/node/.n8n
 
